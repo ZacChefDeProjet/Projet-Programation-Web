@@ -1,1 +1,64 @@
 
+from flask import Flask, url_for, request, render_template, redirect
+app = Flask(__name__)
+
+# placer les fonctions route /vue de l ’ app l icat ion Flask i c i
+@app. route( '/' )
+def index ( ) :
+	contenu= ''
+	contenu += "<a href='" + url_for("choix_voiture") + "'>Voitures</a><br/><br/>"
+	return contenu
+	
+def retour_precedent():
+	return "<a href='" + url_for("choix_voiture") + "'>retour </a><br/><br/>"
+
+@app.route('/Choix_Voiture')
+def choix_voiture():
+	contenu=''
+	
+	contenu+="<a href='" + url_for("voiture_CCF") + "'>CCF</a><br/><br/>"
+	contenu+="<a href='" + url_for("voiture_CCO") + "'>CCO</a><br/><br/>"
+	contenu+="<a href='" + url_for("voiture_CLF") + "'>CLF</a><br/><br/>"
+	contenu+="<a href='" + url_for("voiture_CLO") + "'>CLO</a><br/><br/>"
+	contenu+="<a href='" + url_for("contact") + "'>Contact</a><br/><br/>"
+	return contenu
+
+@app.route('/CCF')
+def voiture_CCF():
+	contenu=''
+	contenu+=retour_precedent()
+	return contenu
+	
+@app.route('/CCO')
+def voiture_CCO():
+	contenu=''
+	contenu+=retour_precedent()
+	return contenu
+	
+@app.route('/CLF')
+def voiture_CLF():
+	contenu=''
+	contenu+=retour_precedent()
+	return contenu
+	
+@app.route('/CLO')
+def voiture_CLO():
+	contenu=''
+	contenu+=retour_precedent()
+	return contenu
+	
+@app.route('/Contact')
+def contact():
+	contenu=''
+	contenu+=retour_precedent()
+	contenu+= 'Mail: iCare@mail.com'
+	return contenu
+
+
+@app.route('/hello_get', methods=['GET']) 
+def connexion():
+	contenu=''
+	return contenu
+
+if __name__ == '__main__' :
+	app.run(debug=True)
