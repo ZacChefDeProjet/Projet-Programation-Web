@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+<style>
+	.MonCompte {
+		float: right;
+		position: relative;
+	}
+	.MonCompte .dropdown {
+		display: none; /* cacher le menu déroulant par défaut */
+		position: absolute;
+		top: 100%; /* placer le menu déroulant juste en dessous du menu */
+		right: 0;
+		background-color: #fff;
+		padding: 10px;
+		box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* ajouter une ombre pour un effet de profondeur */
+		z-index: 1;
+    text-color:black;
+    font-family:'Futura';
+    font-size: 85%;
+    width: 110px
+	}
+	.MonCompte:hover .dropdown {
+		display: block; /* afficher le menu déroulant au survol du menu */
+	}	
 
+	.Menu {
+		float: left;
+		position: relative; /* ajout d'une position relative */
+	}
+	.Menu .dropdown {
+		display: none; /* cacher le menu déroulant par défaut */
+		position: absolute;
+		top: 100%; /* placer le menu déroulant juste en dessous du menu */
+		left: 0;
+		background-color: #fff;
+		padding: 10px;
+		box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* ajouter une ombre pour un effet de profondeur */
+		z-index: 1;
+    text-color:black;
+    font-family:'Futura';
+    font-size: 85%;
+    width: 110px
+	}
+	.Menu:hover .dropdown {
+		display: block; /* afficher le menu déroulant au survol du menu */
+	}
+</style>
+</head>
+<body>
+	<div style="background-color:#ffc900">
+		<div class="Menu">
+			<img src="Menu.png" alt="Menu" style="width:32px;height:32px;margin-left:10px;">
+			<div class="dropdown">
+				<!-- contenu du menu déroulant -->
+				<a href="#">Accueil</a><br>
+				<a href="#">Mes commandes</a><br>
+				<a href="#">Contactez-nous</a><br>
+			</div>
+		</div>
+		<div class="MonCompte">
+			<img class="MonCompte" src="LogoCompte.png" alt="Mon Compte" style="width:26px;height:26px;margin-right:10px;margin-top:3px;margin-bottom:3px">
+			<div class="dropdown">
+				<!-- contenu du menu déroulant -->
+				<a href="#">Mon Compte</a><br>
+				<a href="#">AgiLean</a><br>
+				<a href="#">AgiLog</a><br>
+				<a href="#">Se déconnecter</a><br>
+			</div>
+		</div>
+		<h2 style="font-family:'Futura',bold; color:#ffffff; text-align:center;">InnovaFun</h2>
+	</div>
+	<div style="background-color:#dcdcdc; font-family:'Futura'">
+		<p>Créé depuis un peu plus d’un an, le Groupe InnovaFun a donné naissance à une nouvelle gamme de véhicules électriques équipés de 4 roues motrices visant des applications de niche pour les collectivités, l'industrie et les loisirs. Les débouchés sont multiples : <br>
+		Applications collectivités : entretien parcs et jardins, base de loisirs, traitement et pulvérisation, manutention, entretien voirie non conventionnelles, interventions pompiers, eaux et forets <br>
+		Applications industrie: logistique de chantiers, transport de pièces, maintenance, facility management <br>
+		Applications loisirs : découverte nature, utilisation sportive, parcs de loisirs, véhicule fun multi usages (utilitaire, sports, citadin, etc.) <br>
+		</p>
+	</div>
+</body>
+</html>
