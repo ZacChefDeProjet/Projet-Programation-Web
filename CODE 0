@@ -1,0 +1,18 @@
+from flask import Flask, url_for, request, render_template, redirect
+app = Flask(__name__)
+
+# placer les fonctions route /vue de l ’ app l icat ion Flask i c i
+@app. route( '/' )
+def index ( ) :
+	contenu= ''
+	contenu += "<a href='" + url_for("accueil") + "'>template</a><br/><br/>"
+	return contenu
+
+
+@app. route( '/accueil' )
+
+def accueil():
+	return render_template('Page Accueil Déconnecté.html')
+
+if __name__ == '__main__':
+	app.run(debug=True)
